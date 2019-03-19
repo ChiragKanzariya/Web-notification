@@ -7,7 +7,7 @@ self.addEventListener('push', function (event) {
     const data = JSON.parse(eventInfo);
     const head = data.head || 'New Notification 🕺🕺';
     const body = data.body || 'This is default content. Your notification didn\'t have one 🙄🙄';
-    print(eventInfo)
+    console.log(eventInfo);
 
     // Keep the service worker alive until the notification is created.
     event.waitUntil(
